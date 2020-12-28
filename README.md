@@ -39,15 +39,46 @@ docker run nginx:latest
 ```
 
 This will hang the terminal as it is processing and running the container:
-To varify this open a new terminal and run command:
+
+To verify this open a new terminal and run command:
 
 ```
-docker container ls or docker ps
+docker container ls OR docker ps
 ```
 
-Now if we want to run it in detached mode please add -d in the first command:
+Now if we want to run it in detached mode please add -d in the first command and verify again:
 
 ```
 docker run -d nginx:latest
+docker container ls OR docker ps
 ```
+
+**Exposing Port**
+
+After running the command:
+
+```
+docker run -d nginx:latest
+docker container ls OR docker ps
+```
+We can see the port number of the container. Use this port to map localhost to this container.
+
+To map it to a localhost port please run the following command:
+
+```
+docker run -d -p 8080:80 nginx:latest
+docker ps
+```
+
+Port should look like this: 0.0.0.0:8080->80/tcp
+
+
+
+
+
+
+
+
+
+
 
