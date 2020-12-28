@@ -29,9 +29,6 @@ This is a complete overview of Dockers.
 For all the testing lets download an image from Docker Hub. (Link: https://hub.docker.com/)
 
 	- I downloaded image named ubuntu.
-	- Run command: 
-	```
-	docker pull ubuntu
-	```
+	- Run command: docker pull ubuntu
 
 
