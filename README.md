@@ -28,7 +28,26 @@ This is a complete overview of Dockers.
 
 For all the testing lets download an image from Docker Hub. (Link: https://hub.docker.com/)
 
-	- I downloaded image named ubuntu.
-	- Run command: > docker pull ubuntu
+	- I downloaded image named nginx.
+	- Run command: docker pull nginx
 
+
+To run a container from this image, simply run command:
+
+```
+docker run nginx:latest
+```
+
+This will hang the terminal as it is processing and running the container:
+To varify this open a new terminal and run command:
+
+```
+docker container ls or docker ps
+```
+
+Now if we want to run it in detached mode please add -d in the first command:
+
+```
+docker run -d nginx:latest
+```
 
