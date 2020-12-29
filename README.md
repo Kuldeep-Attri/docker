@@ -212,7 +212,10 @@ Dockerfile allows to create our own images and then run on images to create cont
 Dockerfile -->  Images --> Containers
 
 Link to the Dockerfile reference: *https://docs.docker.com/engine/reference/builder/*
-In this link you can find all the commands that we can use in Dockerfile
+
+In the above link we can find all the commands that we can use in Dockerfile
+
+
 
 
 
