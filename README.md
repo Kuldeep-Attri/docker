@@ -215,6 +215,8 @@ Link to the Dockerfile reference: *https://docs.docker.com/engine/reference/buil
 
 In the above link we can find all the commands that we can use in Dockerfile
 
+Dockerfile defination: *It is a series of steps that defines how the image is build*
+
 
 
 
