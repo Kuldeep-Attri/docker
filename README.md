@@ -227,13 +227,10 @@ Dockerfile defination: *It is a series of steps that defines how the Image is bu
 
 - We never build from start
 - We always start from an existing Image as our base Image using FROM syntax
-
 ```
 FROM nginx:latest
 ```
-
 - We add other files now using command
-
 ```
 ADD ./ /usr/share/nginx/html
 ```
