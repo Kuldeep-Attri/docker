@@ -40,7 +40,7 @@ docker run nginx:latest
 
 This will hang the terminal as it is processing and running the container:
 
-To verify this open a new terminal and run command:
+To verify this, open a new terminal and run command:
 
 ```
 docker container ls OR docker ps
@@ -55,7 +55,7 @@ docker container ls OR docker ps
 
 *Please note that this always star a new continaer with different name and ID*
 
-### Exposing Ports
+### Exposing Ports:
 
 After running the command:
 
@@ -82,7 +82,7 @@ docker ps
 Port should look like this: 0.0.0.0:8080->80/tcp
 
 
-### Managing Containers
+### Managing Containers:
 
 Check if you have a running container with command:
 
@@ -143,7 +143,7 @@ run command:
 docker ps --format=$df
 ```
 
-### Volumes
+### Volumes:
 
 - Docker volumes allows us to share data
 - Simply allows us to share data between host & container and also between containers
@@ -194,7 +194,8 @@ docker run -d -p 8081:80 --name kd_tut2 --volumes-from kd_tut1 nginx:latest
 ```
 Now run the localhost:8081 and you will see it mounted with localhost:8080
 
-### Build Images
+
+### Build Images:
 
 So far, we have been using the image from docker hub with the name nginx:latest
 
