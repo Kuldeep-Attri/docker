@@ -149,6 +149,23 @@ docker ps --format=$df
 - Simply allows us to share data between host & container and also between containers
 - 
 
+1. Sharing between host and container(vice versa):
+
+We need to mount our host directory(source) to container's directory(target)
+
+So prepare a local path which you will mount e.g. */Users/kuldeepsharma/github/docker/files/*
+
+Create an *index.html* file in this directory and write '<h1> "Your text"</h1>' in this html file.
+
+Now to mount this directory to a nginx container's directory run the following command:
+
+```
+
+```
+
+
+
+
 
 
 
