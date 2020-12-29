@@ -123,7 +123,7 @@ docker rm $(docker ps -aq)
 
 To name a container when you start it please run command:
 
-*Please note it is always a good habit to name your contianer, highly recommended!*
+*Please note it is always a good habit to name your container, highly recommended!*
 
 ```
 docker run --name kd_tut1 -d -p 8080:80 nginx:latest
@@ -145,6 +145,9 @@ docker ps --format=$df
 
 **Volumes**
 
+- Docker volumes allows us to share data
+- Simply allows us to share data between host & container and also between containers
+- 
 
 
 
