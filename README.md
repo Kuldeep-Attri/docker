@@ -223,7 +223,7 @@ Dockerfile defination: *It is a series of steps that defines how the image is bu
 - Create a new file Dockerfile(must name this)
 - Save in */Users/kuldeepsharma/github/docker/files/* drectory i.e. the root mounted directory
 
-Now we edit this Dockerfile:
+**Now we edit this Dockerfile:**
 
 - We never build from start
 - We always start from an existing image as our base Image using FROM syntax
