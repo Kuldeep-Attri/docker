@@ -53,6 +53,8 @@ docker run -d nginx:latest
 docker container ls OR docker ps
 ```
 
+*Please note that this always star a new continaer with different name and ID*
+
 **Exposing Port**
 
 After running the command:
@@ -70,7 +72,57 @@ docker run -d -p 8080:80 nginx:latest
 docker ps
 ```
 
+or for multiple ports
+
+```
+docker run -d -p 8080:80 -p 3000:80 nginx:latest
+docker ps
+```
+
 Port should look like this: 0.0.0.0:8080->80/tcp
+
+
+**Managing Containers**
+
+Check if you have a running container with command:
+
+```
+docker ps
+```
+
+this will print the ID and name and other variables of the containers.
+
+To stop a container run command:
+
+```
+docker stop container_name or container_id
+docker stop c80b43ce6673
+```
+
+To start a container run command:
+
+```
+docker start container_name or container_id
+docker start c80b43ce6673   
+```
+
+To delete a container run command:
+
+```
+docker rm container_name or container_id
+docker rm c80b43ce6673   
+```
+
+for deleting multuple containers
+
+```
+docker rm $(docker ps -aq)
+```
+
+*Please note that it won't work if we have a running container or you can force rm(just add -f)*
+
+
+
 
 
 
