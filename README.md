@@ -16,7 +16,7 @@ This is a complete overview of Dockers.
 ### Docker Image: 
 	
 	- It is a template for creating an enviornment of your choice also a snapshot
-	- Snapshots: It allows us to go back to last image or otther versions of the image in case we make mistakes
+	- Snapshots: It allows us to go back to last Image or otther versions of the Image in case we make mistakes
 	- It has everything to run an APP
 	- OS, Software, Libraries, AppCode
 	-
@@ -26,13 +26,13 @@ This is a complete overview of Dockers.
 	- It is a running instance of an Image
 	-
 
-For all the testing lets download an image from Docker Hub. (Link: https://hub.docker.com/)
+For all the testing lets download an Image from Docker Hub. (Link: https://hub.docker.com/)
 
-	- I downloaded image named nginx.
+	- I downloaded Image named nginx.
 	- Run command: docker pull nginx
 
 
-To run a container from this image, simply run command:
+To run a container from this Image, simply run command:
 
 ```
 docker run nginx:latest
@@ -134,7 +134,7 @@ To read 'docker ps' command in a better or readable vertical format run the comm
 Add folowing in your .bash_profile and source it: 
 
 ```
-export df="ID\t{{.ID}}\nNAME\t{{.Names}}\nIMAGE\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
+export df="ID\t{{.ID}}\nNAME\t{{.Names}}\nImage\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
 ```
 
 run command:
@@ -197,17 +197,17 @@ Now run the localhost:8081 and you will see it mounted with localhost:8080
 
 ### Build Images: Dockerfile
 
-So far, we have been using the image from docker hub with the name nginx:latest
+So far, we have been using the Image from docker hub with the name nginx:latest
 
-And we were using this image to create containers buy the command *docker run*:
+And we were using this Image to create containers buy the command *docker run*:
 
 ```
-docker run --help image_name 
+docker run --help Image_name 
 ```
 
-Now, we will learn how to build our own images
+Now, we will learn how to build our own Images
 
-Dockerfile allows to create our own images and then run on images to create containers
+Dockerfile allows to create our own Images and then run on Images to create containers
 
 Dockerfile -->  Images --> Containers
 
@@ -215,9 +215,9 @@ Link to the Dockerfile reference: *https://docs.docker.com/engine/reference/buil
 
 In the above link we can find all the commands that we can use in Dockerfile
 
-Dockerfile defination: *It is a series of steps that defines how the image is build*
+Dockerfile defination: *It is a series of steps that defines how the Image is build*
 
-**Lets create a dockerfile and then an image from it:**
+**Lets create a Dockerfile and then an Image from it:**
 
 - Open your favorite editor(Sublime)
 - Create a new file Dockerfile(must name this)
@@ -226,18 +226,19 @@ Dockerfile defination: *It is a series of steps that defines how the image is bu
 **Now we edit this Dockerfile:**
 
 - We never build from start
-- We always start from an existing image as our base Image using FROM syntax
+- We always start from an existing Image as our base Image using FROM syntax
 
 ```
 FROM nginx:latest
 ```
+
 - We add other files now using command
 
 ```
 ADD ./ /usr/share/nginx/html
 ```
 
-
+Now we have created a Dokcerfile and now lets build an Image from this Dockerfile
 
 
 
