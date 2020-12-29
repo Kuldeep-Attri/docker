@@ -160,8 +160,32 @@ Create an *index.html* file in this directory and write in this html file.
 Now to mount this directory to a nginx container's directory run the following command:
 
 ```
+docker run -d -p 8080:80 --name kd_tut1 -v /Users/kuldeepsharma/github/docker/files/:/usr/share/nginx/html nginx:latest
+```
+
+Now, to excute/edit/write in a docker container run the following command:
 
 ```
+docker exec -it container_name or id bash
+docker exec -it kd_tut1 bash
+```
+
+Now we will go into more depth so clone a html template from this git repo *https://github.com/startbootstrap/startbootstrap-grayscale* on path */Users/kuldeepsharma/github/docker/files/*
+
+And after that run the following commands:
+
+```
+rm *.html
+mv startbootstrap-grayscale/dist/* ./
+rm -r startbootstrap-grayscale
+```
+
+Run the localhost:8080 again to see new website
+
+
+
+
+
 
 
 
