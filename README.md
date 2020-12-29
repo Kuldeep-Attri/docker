@@ -170,7 +170,7 @@ docker exec -it container_name or id bash
 docker exec -it kd_tut1 bash
 ```
 
-This is optional:
+This is optional, you can keep the any index.html file:
 
 Now we will go into more depth so clone a html template from this git repo *https://github.com/startbootstrap/startbootstrap-grayscale* on path */Users/kuldeepsharma/github/docker/files/*
 
@@ -186,6 +186,14 @@ Run the localhost:8080 again to see new beautiful website instead of a boring on
 
 
 2. Sharing between the containers:
+
+For this, lets create and start a new container and to do so run command:
+
+```
+docker run -d -p 8081:80 --name kd_tut2 --volumes-from kd_tut1 nginx:latest
+```
+Now run the localhost:8081 and you will see it mounted with localhost:8080
+
 
 
 
