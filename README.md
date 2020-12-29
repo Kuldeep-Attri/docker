@@ -217,6 +217,13 @@ In the above link we can find all the commands that we can use in Dockerfile
 
 Dockerfile defination: *It is a series of steps that defines how the image is build*
 
+**Lets create a dockerfile and then an image from it:**
+
+	- Open your favorite editor(Sublime)
+	- Create a new file Dockerfile(must name this)
+	- Save in */Users/kuldeepsharma/github/docker/files/* drectory i.e. the root mounted directory
+
+
 
 
 
