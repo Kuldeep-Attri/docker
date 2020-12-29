@@ -194,6 +194,12 @@ docker run -d -p 8081:80 --name kd_tut2 --volumes-from kd_tut1 nginx:latest
 ```
 Now run the localhost:8081 and you will see it mounted with localhost:8080
 
+**Build Images**
+
+So far, we have been using the image from docker hub with the name nginx:latest
+
+Now, we will learn how to build our own images
+
 
 
 
