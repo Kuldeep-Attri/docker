@@ -13,7 +13,7 @@ This is a complete overview of Dockers.
 	4. Ease of Deployment and Testing.
 
 
-**Docker Image:** 
+### Docker Image: 
 	
 	- It is a template for creating an enviornment of your choice also a snapshot
 	- Snapshots: It allows us to go back to last image or otther versions of the image in case we make mistakes
@@ -21,7 +21,7 @@ This is a complete overview of Dockers.
 	- OS, Software, Libraries, AppCode
 	-
 
-**Docker Container:** 
+### Docker Container:
 	
 	- It is a running instance of an Image
 	-
