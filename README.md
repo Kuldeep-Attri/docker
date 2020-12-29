@@ -55,7 +55,7 @@ docker container ls OR docker ps
 
 *Please note that this always star a new continaer with different name and ID*
 
-**Exposing Port**
+### Exposing Ports
 
 After running the command:
 
@@ -82,7 +82,7 @@ docker ps
 Port should look like this: 0.0.0.0:8080->80/tcp
 
 
-**Managing Containers**
+### Managing Containers
 
 Check if you have a running container with command:
 
@@ -143,7 +143,7 @@ run command:
 docker ps --format=$df
 ```
 
-**Volumes**
+### Volumes
 
 - Docker volumes allows us to share data
 - Simply allows us to share data between host & container and also between containers
