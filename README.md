@@ -199,7 +199,15 @@ Now run the localhost:8081 and you will see it mounted with localhost:8080
 
 So far, we have been using the image from docker hub with the name nginx:latest
 
-Now, we will learn how to build our own images...
+And we were using this image to create containers buy the command *docker run*:
+
+```
+docker run --help image_name 
+```
+
+Now, we will learn how to build our own images
+
+
 
 
 
