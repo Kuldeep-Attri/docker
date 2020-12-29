@@ -121,6 +121,17 @@ docker rm $(docker ps -aq)
 
 *Please note that it won't work if we have a running container or you can force rm(just add -f)*
 
+To name a container when you start it please run command:
+
+*Please note it is always a good habit to name your contianer, highly recommended!*
+
+```
+docker run --name kd_tut1 -d -p 8080:80 nginx:latest
+docker ps
+```
+
+
+
 
 
 
