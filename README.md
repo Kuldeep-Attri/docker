@@ -129,6 +129,22 @@ To name a container when you start it please run command:
 docker run --name kd_tut1 -d -p 8080:80 nginx:latest
 docker ps
 ```
+To read 'docker ps' command in a better or readable vertical format run the command:
+
+Add folowing in your .bash_profile and source it: 
+
+```
+export df="ID\t{{.ID}}\nNAME\t{{.Names}}\nIMAGE\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
+```
+
+run command:
+
+```
+docker ps --format=$df
+```
+
+**Volumes**
+
 
 
 
