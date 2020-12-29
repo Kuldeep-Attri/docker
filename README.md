@@ -170,6 +170,8 @@ docker exec -it container_name or id bash
 docker exec -it kd_tut1 bash
 ```
 
+This is optional:
+
 Now we will go into more depth so clone a html template from this git repo *https://github.com/startbootstrap/startbootstrap-grayscale* on path */Users/kuldeepsharma/github/docker/files/*
 
 And after that run the following commands:
@@ -180,7 +182,14 @@ mv startbootstrap-grayscale/dist/* ./
 rm -r startbootstrap-grayscale
 ```
 
-Run the localhost:8080 again to see new website
+Run the localhost:8080 again to see new beautiful website instead of a boring one
+
+
+2. Sharing between the containers:
+
+
+
+
 
 
 
