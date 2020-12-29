@@ -4,8 +4,8 @@ This is a complete overview of Dockers.
 
 **Q1. What is the difference between Dockers and VMs?**
 
-	Dockers allows us to have containers that can run on a host OS whereas VMs have their own guest OS. 
-	Multiple containers can share one OS but multiple VMs need seprate and own guest OS.
+	Dockers allows us to have Containers that can run on a host OS whereas VMs have their own guest OS. 
+	Multiple Containers can share one OS but multiple VMs need seprate and own guest OS.
 
 	1. Containers runs much faster than VMs
 	2. Less disk space and other resources
@@ -32,25 +32,25 @@ For all the testing lets download an Image from Docker Hub. (Link: https://hub.d
 	- Run command: docker pull nginx
 
 
-To run a container from this Image, simply run command:
+To run a Container from this Image, simply run command:
 
 ```
 docker run nginx:latest
 ```
 
-This will hang the terminal as it is processing and running the container:
+This will hang the terminal as it is processing and running the Container:
 
 To verify this, open a new terminal and run command:
 
 ```
-docker container ls OR docker ps
+docker Container ls OR docker ps
 ```
 
 Now if we want to run it in detached mode please add -d in the first command and verify again:
 
 ```
 docker run -d nginx:latest
-docker container ls OR docker ps
+docker Container ls OR docker ps
 ```
 
 *Please note that this always star a new continaer with different name and ID*
@@ -61,9 +61,9 @@ After running the command:
 
 ```
 docker run -d nginx:latest
-docker container ls OR docker ps
+docker Container ls OR docker ps
 ```
-We can see the port number of the container. Use this port to map localhost to this container.
+We can see the port number of the Container. Use this port to map localhost to this Container.
 
 To map it to a localhost port please run the following command:
 
@@ -84,46 +84,46 @@ Port should look like this: 0.0.0.0:8080->80/tcp
 
 ### Managing Containers:
 
-Check if you have a running container with command:
+Check if you have a running Container with command:
 
 ```
 docker ps
 ```
 
-this will print the ID and name and other variables of the containers.
+this will print the ID and name and other variables of the Containers.
 
-To stop a container run command:
+To stop a Container run command:
 
 ```
-docker stop container_name or container_id
+docker stop Container_name or Container_id
 docker stop c80b43ce6673
 ```
 
-To start a container run command:
+To start a Container run command:
 
 ```
-docker start container_name or container_id
+docker start Container_name or Container_id
 docker start c80b43ce6673   
 ```
 
-To delete a container run command:
+To delete a Container run command:
 
 ```
-docker rm container_name or container_id
+docker rm Container_name or Container_id
 docker rm c80b43ce6673   
 ```
 
-for deleting multuple containers
+for deleting multuple Containers
 
 ```
 docker rm $(docker ps -aq)
 ```
 
-*Please note that it won't work if we have a running container or you can force rm(just add -f)*
+*Please note that it won't work if we have a running Container or you can force rm(just add -f)*
 
-To name a container when you start it please run command:
+To name a Container when you start it please run command:
 
-*Please note it is always a good habit to name your container, highly recommended!*
+*Please note it is always a good habit to name your Container, highly recommended!*
 
 ```
 docker run --name kd_tut1 -d -p 8080:80 nginx:latest
@@ -146,27 +146,27 @@ docker ps --format=$df
 ### Volumes:
 
 - Docker volumes allows us to share data
-- Simply allows us to share data between host & container and also between containers
+- Simply allows us to share data between host & Container and also between Containers
 - 
 
-1. Sharing between host and container(vice versa):
+1. Sharing between host and Container(vice versa):
 
-We need to mount our host directory(source) to container's directory(target)
+We need to mount our host directory(source) to Container's directory(target)
 
 So prepare a local path which you will mount e.g. */Users/kuldeepsharma/github/docker/files/*
 
 Create an *index.html* file in this directory and write in this html file.
 
-Now to mount this directory to a nginx container's directory run the following command:
+Now to mount this directory to a nginx Container's directory run the following command:
 
 ```
 docker run -d -p 8080:80 --name kd_tut1 -v /Users/kuldeepsharma/github/docker/files/:/usr/share/nginx/html nginx:latest
 ```
 
-Now, to excute/edit/write in a docker container run the following command:
+Now, to excute/edit/write in a docker Container run the following command:
 
 ```
-docker exec -it container_name or id bash
+docker exec -it Container_name or id bash
 docker exec -it kd_tut1 bash
 ```
 
@@ -185,9 +185,9 @@ rm -r startbootstrap-grayscale
 Run the localhost:8080 again to see new beautiful website instead of a boring one
 
 
-2. Sharing between the containers:
+2. Sharing between the Containers:
 
-For this, lets create and start a new container and to do so run command:
+For this, lets create and start a new Container and to do so run command:
 
 ```
 docker run -d -p 8081:80 --name kd_tut2 --volumes-from kd_tut1 nginx:latest
@@ -199,7 +199,7 @@ Now run the localhost:8081 and you will see it mounted with localhost:8080
 
 So far, we have been using the Image from docker hub with the name nginx:latest
 
-And we were using this Image to create containers buy the command *docker run*:
+And we were using this Image to create Containers buy the command *docker run*:
 
 ```
 docker run --help Image_name 
@@ -207,7 +207,7 @@ docker run --help Image_name
 
 Now, we will learn how to build our own Images
 
-Dockerfile allows to create our own Images and then run on Images to create containers
+Dockerfile allows to create our own Images and then run on Images to create Containers
 
 Dockerfile -->  Images --> Containers
 
@@ -235,7 +235,25 @@ FROM nginx:latest
 ADD ./ /usr/share/nginx/html
 ```
 
-Now we have created a Dokcerfile and now lets build an Image from this Dockerfile
+**Now we have created a Dokcerfile and now lets build an Image from this Dockerfile**
+
+- We will use 'docker build'
+- We must specify tag using --tag or -t
+- Path to he Dockerfle
+
+Run the following command to build Image:
+
+```
+docker build --tag kd_image:latest ./files
+```
+
+After building the Image lets run/start a Container from it using the commands we discussed above
+
+
+## We will going to learn more about Dockerfile
+
+**Lets build an API so get NodeJS in our system**
+
 
 
 
