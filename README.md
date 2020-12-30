@@ -287,6 +287,8 @@ Now our localhost:3000 should run from our local computer without any Docker
 
 Now lets add this whole api to a Dockerfile, we will follow the above process
 
+Create a new file with name Dockerfille and write the following commands
+
 ```
 # As discussed before always start from a base Image(look on DockerHub)
 FROM node:latest
@@ -313,7 +315,10 @@ Run the container from this image
 docker run --name user-api -d -p 3000:3000 user-service-api:latest
 ```
 
-Now our localhost:3000 should run again, but this time by using Docker
+Now our localhost:3000 should run again, but this time by using Docker!!!
+
+
+
 
 
 
