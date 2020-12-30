@@ -1,0 +1,8 @@
+# We should ignore all the files and folders
+# that our image will build again or do not required
+
+node_modules
+Dockerfile
+
+.git
+.gitignore
