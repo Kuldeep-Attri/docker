@@ -282,7 +282,7 @@ Run the index.js file:
 node index.js
 ```
 
-Now our localhost:3000 should run from our local computer without any Docker
+Now our ```localhost:3000``` should run from our local computer without any Docker
 
 
 Now lets add this whole api to a Dockerfile, we will follow the above process
@@ -315,7 +315,7 @@ Run the container from this image
 docker run --name user-api -d -p 3000:3000 user-service-api:latest
 ```
 
-Now our localhost:3000 should run again, but this time by using Docker!!!
+Now our ```localhost:3000``` should run again, but this time by using Docker!!!
 
 
 
