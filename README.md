@@ -347,6 +347,18 @@ So whenever we make changes in a file or folder, we need to build Image again fr
 
 During building Images we install same libraries again and again, this can be avoided by using caches  
 
+To do so we need to edit the Dokcerfile
+
+```
+# This will be fixed and run would not see any changes so will use cache for RUN
+# Why not add  ```RUN npm install at the top```?
+ADD package*.json .
+RUN npm install
+ADD ./ ./
+CMD node index.js
+```
+
+
 
 
 
