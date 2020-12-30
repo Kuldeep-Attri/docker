@@ -318,9 +318,24 @@ docker run --name user-api -d -p 3000:3000 user-service-api:latest
 Now our ```localhost:3000``` should run again, but this time by using Docker!!!
 
 
-Lets see the Dockerignore fille
+Lets see the .dockerignore fille
 
--This is used when we do not want to put some direcotory on git etc.
+-This is used when we do not want any files or folders in Image
+
+Create a new file ```.dockerfileignore``` in same directory
+
+Add the following code into this:
+
+```
+# We should ignore all the files and folders
+# that our image will build again or do not required
+
+node_modules
+Dockerfile
+
+.git
+.gitignore
+```
 
 
 
