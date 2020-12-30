@@ -337,6 +337,11 @@ Dockerfile
 .gitignore
 ```
 
+Now after adding .gitgnore, build an Image again by folloing commands above
+
+**Layer and Caching while buiild an Image**
+
+
 
 
 
