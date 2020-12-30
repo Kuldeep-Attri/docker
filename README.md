@@ -254,6 +254,35 @@ After building the Image lets run/start a Container from it using the commands w
 
 **Lets build an API so get NodeJS in our system**
 
+Download from the Link(https://nodejs.org/en/download/) and then install the .dmg file
+
+Now, lets get the framework Express JS
+- Allows us to create APIs
+- Allows us to create websites
+- To install follow the step on the website (https://expressjs.com/en/starter/installing.html)
+- Create a new file *index.js* in 'user-service-api' directory
+- Copy the folloing code in index.js:
+```
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})
+```
+
+Run the index.js file:
+
+```
+node index.js
+```
+
+
 
 
 
