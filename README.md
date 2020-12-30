@@ -319,6 +319,7 @@ Now our ```localhost:3000``` should run again, but this time by using Docker!!!
 
 
 Lets see the Dockerignore fille
+
 -This is used when we do not want to put some direcotory on git etc.
 
 
