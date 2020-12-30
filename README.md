@@ -358,7 +358,17 @@ ADD ./ ./
 CMD node index.js
 ```
 
+Now build the image again and you will see the npm install step used the cache
+```
+docker build --tag user-service-api:latest ./
+```
 
+Run the container again
+```
+docker run --name user-api -d -p 3000:3000 user-service-api:latest
+```
+
+### Alpine
 
 
 
