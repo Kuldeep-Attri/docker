@@ -370,7 +370,13 @@ docker run --name user-api -d -p 3000:3000 user-service-api:latest
 
 ### Alpine
 
+**https://alpinelinux.org/** Read more here
 
+In this, we will see how to we are going to improve Image size with Docker and Alpine
+
+- Very useful when you have 100s of Images
+- Improve speed
+- Sometime we do not need everything inside Dockerfile 
 
 
 
