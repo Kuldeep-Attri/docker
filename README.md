@@ -341,7 +341,11 @@ Now after adding .gitgnore, build an Image again by folloing commands above
 
 **Layer and Caching while buiild an Image**
 
+Each line in Dockerfile creata a layer and layer need/use cache
 
+So whenever we make changes in a file or folder, we need to build Image again maybe with different version. After building we run a container again to run our APIs. 
+
+During building the Images we install same libraries again and again, this can be avoided by using caches  
 
 
 
