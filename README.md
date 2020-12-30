@@ -318,6 +318,9 @@ docker run --name user-api -d -p 3000:3000 user-service-api:latest
 Now our ```localhost:3000``` should run again, but this time by using Docker!!!
 
 
+Lets see the Dockerignore fille
+-This is used when we do not want to put some direcotory on git etc.
+
 
 
 
