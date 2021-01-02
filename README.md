@@ -370,7 +370,9 @@ docker run --name user-api -d -p 3000:3000 user-service-api:latest
 
 ### Alpine
 
-**https://alpinelinux.org/** Read more here
+**https://alpinelinux.org/**
+
+Read more here
 
 In this, we will see how to we are going to improve Image size with Docker and Alpine
 
@@ -379,15 +381,23 @@ In this, we will see how to we are going to improve Image size with Docker and A
 - Sometime we do not need everything inside Dockerfile 
 
 
+For using this, instead of getting the latest tag we can get an alpine tag for the Image. Check the docker hub and the tags of Images to get the alpine version.
 
+Run the command to get the latest alpine:
 
+```
+docker pull node:lts-alpine
 
+or // (Depending on the image)
 
+docker pull nginx:alpine
+```
+Now, if you run ```docker image ls``` you will see a huge difference between the two image of latest vs. lts-alpine tag.
 
+Lets convert our image(*user-service-api*)
+to alpine version
 
-
-
-
+For this, we edit the Dockerfile and the FROM line in the Dockerfile	
 
 
 
