@@ -399,5 +399,9 @@ to alpine version
 
 For this, we edit the Dockerfile and the FROM line in the Dockerfile	
 
+E.g.
+```
+FROM node:alpine
+```
 
 
