@@ -1,4 +1,4 @@
-# Docker.
+# 1. Docker.
 
 This is a complete overview of Dockers.
 
@@ -502,12 +502,7 @@ This will take us into the container as a terminal and we can then move around e
 ### THANK YOU!!!
 
 
-
-
-
-
-
-
+# 2. Kubernetes
 
 
 
