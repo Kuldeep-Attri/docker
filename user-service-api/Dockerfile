@@ -1,5 +1,5 @@
 # As discussed before always start from a base Image(look on DockerHub)
-FROM node:81.6.0-alpine
+FROM node:8.16.0-alpine
 # This will create a directory in the container with name 'app' and make it PWD
 WORKDIR /app
 # Add already build packeges
