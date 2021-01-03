@@ -412,7 +412,7 @@ FROM node:alpine
 
 Having a verison numbe rin tag is quite good. Lets say if in Dockerfile we always get the latest image, 
 - So assume today latest is version 8
-- And after 1 month its 12
+- After a month the version updated to 12
 
 This migh cause our app developement an issue as our app might not be compatible with version 12. We can control this by secifying the version exactly
 
