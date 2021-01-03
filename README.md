@@ -486,6 +486,22 @@ or
 docker logs -f container_id/container_name
 ```
 
+**Docker Exec**
+
+Sometime we want to go inside the container and see what is happening exactly or what is inside it and other stuff
+
+Run Command:
+```
+docker exec -it container_id/container_name /bin/bash
+```
+
+This will take us into the container as a terminal and we can then move around edit and run files.
+
+
+
+### THANK YOU!!!
+
+
 
 
 
