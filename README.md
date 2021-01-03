@@ -427,6 +427,16 @@ instead of using:
 FROOM node:lts-alpine
 ```
 
+I am sure you have noted so far that whenever we build a new Image with same tag the older one goes to the 'none' &  'none' name and tag
+
+So we can always transform the tag of the current working to some version number before we move into editing or adding morre functionality
+
+Run the command below to transform one Image tag to some version:
+```
+docker tag webapp:latest webapp:v1 
+```
+
+This will store our current Image to version v1 tag, in future, we can always work on this orr come back to this if we mess up with version v2
 
 
 
