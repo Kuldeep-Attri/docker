@@ -439,5 +439,37 @@ docker tag webapp:latest webapp:v1
 This will store our current Image to version v1 tag, in future, we can always work on this orr come back to this if we mess up with version v2
 
 
+### Docker Registry
+
+- It is a highly scalable server side application that let us store and distibute the Docker Images
+- Can be used for our CD/CI Pipeline
+- Run our applications
+
+
+Lets say we have multiple Images at our host and we want to push them into the docker registry
+
+Two types of Docker Registiries:
+- Private {we do not want people to see our Images}
+- Public {e.g. Dockerhub, Amazon ECR}
+
+Lets push our Images to the Dockerhub registry
+
+*You need to create an account and then sign in to push Images to Dockerhub. Then need tot create a repo there just like we do in Github.*
+
+After that run the command:
+```
+e.g. target_name = kuldeep/ML
+e.g. target_tag = v1 or v2 or latest
+
+docker tag source_name:source_tag target_name:target_tag
+
+docker push target_name:target_tag
+```
+
+
+
+
+
+
 
 
