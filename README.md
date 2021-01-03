@@ -405,3 +405,29 @@ FROM node:alpine
 ```
 
 
+### Tags, Versioning and Tagging
+- Allows us to control version of Images
+- Avoid breaking changes
+- Safe to do so
+
+Having a verison numbe rin tag is quite good. Lets say if in Dockerfile we always get the latest image, 
+- So assume today latest is version 8
+- And after 1 month its 12
+
+This migh cause our app developement an issue as our app might not be compatible with version 12. We can control this by secifying the version exactly
+
+```
+FROM node:8.16.0-alpine
+or
+FROM nginx:1.17.2-alpine
+```
+
+instead of using:
+```
+FROOM node:lts-alpine
+```
+
+
+
+
+
