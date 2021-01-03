@@ -466,6 +466,28 @@ docker tag source_name:source_tag target_name:target_tag
 docker push target_name:target_tag
 ```
 
+**Useful Command**
+
+Inspect:
+```
+docker inspect container_id/container_name
+```
+
+**Docker Logs**
+
+This can help us keep track of our containers and their flow
+
+Command:
+```
+docker logs container_id/container_name
+
+or 
+
+docker logs -f container_id/container_name
+```
+
+
+
 
 
 
